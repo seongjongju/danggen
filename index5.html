@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{padding: 0; margin: 0;}
+
+        /******************** haeder **************************/
+        header {padding: 20px 20px 0; margin-bottom: 30px;}
+        header .nav {display: flex; justify-content: space-between; align-items: center; 
+        border-bottom: 1px solid #ddd; padding: 0 15px 10px;}
+        header .nav .nav-name {display: flex; align-items: center;}
+        header .nav .nav-name .nav-name-profile {width: 40px; margin-right: 10px;}
+        header .nav .nav-name .nav-name-profile img {width: 100%; border-radius: 50%;}
+
+        header .nav .nav-name .nav-name-text .nav-name-text-top {display: flex; align-items: center;}
+        header .nav .nav-name .nav-name-text .nav-name-text-top span {font-size: 14px;}
+        header .nav .nav-name .nav-name-text .nav-name-text-top span:last-child {margin-left: 5px; border: 1px solid #ddd; font-size: 9px; border-radius: 30px; padding: 0 5px; color: rgba(0, 0, 0, 0.5);}
+        header .nav .nav-name .nav-name-text p {font-size: 11px; color: rgba(0, 0, 0, 0.5);}
+
+        header .nav .menu-btn {display: block; width: 30px;}
+        header .nav .menu-btn img {width: 100%;}
+        /******************** haeder **************************/
+
+        /******************** main **************************/
+        main {min-height: 500px; padding: 0 20px 30px;}
+        main .my-chat-box {margin-bottom: 15px; width: 90%; margin-left: 10%;}
+        main .my-chat-box .my-chat {display: flex; justify-content: right; align-items: end; margin-bottom: 15px;}
+        main .my-chat-box .my-chat .time {font-size: 12px; margin-right: 5px; color: rgba(0, 0, 0, 0.5); white-space: nowrap;}
+        main .my-chat-box .my-chat .talk {padding: 10px 15px; background: #FF7E36; color: #fff; border-radius: 30px; font-size: 14px;}
+
+        main .you-chat-box {margin-bottom: 15px; width: 90%;}
+        main .you-chat-box .you-chat {display: flex; justify-content: left; align-items: end; margin-bottom: 15px;}
+        main .you-chat-box .you-chat .time {font-size: 12px; margin-left: 5px; color: rgba(0, 0, 0, 0.5); white-space: nowrap;}
+        main .you-chat-box .you-chat .talk {padding: 10px 15px; background: #EAEBEE; color: #000; border-radius: 30px; font-size: 14px;}
+
+        
+
+        /******************** footer **************************/
+        footer {padding: 0 20px 20px;}
+        footer .chat-box {border: 2px solid #000; border-radius: 10px; padding: 10px;}
+        footer .chat-box textarea {width: 100%; height: 100px; border: none; resize: none;} 
+        footer .chat-box textarea:focus {outline: none; border: none;}
+
+        footer .chat-box .chat-box-option {height: 30px; display: flex; 
+        justify-content: space-between; align-items: center;}
+        footer .chat-box .chat-box-option .chat-box-option-icons {display: flex; align-items: center;}
+        footer .chat-box .chat-box-option .chat-box-option-icons img {width: 25px; margin-right: 5px; cursor: pointer;}
+
+        footer .chat-box .chat-box-option .chat-box-option_btn {display: flex; align-items: end;}
+        footer .chat-box .chat-box-option .chat-box-option_btn p {font-size: 12px; color: rgba(0, 0, 0, 0.7); margin-right: 5px;}
+        footer .chat-box .chat-box-option .chat-box-option_btn button {width: 60px; height: 30px; background: #FF7E36; border: none; border-radius: 5px; cursor: pointer; color: #fff;}
+        /******************** footer **************************/
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="nav">
+                <div class="nav-name">
+                    <div class="nav-name-profile">
+                        <img src="images/profile.jpg" alt="프로필 사진">
+                    </div> <!-- .nav-name-profile -->
+                    <div class="nav-name-text">
+                        <div class="nav-name-text-top">
+                            <span>침착맨</span>
+                            <span>36.5˚C</span>
+                        </div>
+                        <p>보통 1시간 이내 응답</p>
+                    </div> <!-- .nav-name-text : end -->
+                </div> <!-- .nav-name : end -->
+
+                <a href="#" class="menu-btn">
+                    <img src="images/menu.svg" alt="menu">
+                </a> <!-- .menu-btn -->
+            </div> <!-- .nav : end -->
+        </header> <!-- header : end -->
+
+        <main>
+            <div class="you-chat-box">
+                <div class="you-chat">
+                    <span class="talk">안녕하세요 물건 판매중이신가요. 대중교통 비용 내고 부탁드립니다.</span>
+                    <span class="time">오후 3:41</span>
+                </div> <!-- .you-chat : end -->
+            </div> <!-- .you-chat-box : end -->
+            <div class="my-chat-box"></div> <!-- .my-chat-box : end -->
+        </main> <!-- main : end -->
+
+        <footer>
+            <div class="chat-box">
+                <textarea name="text" id="text" type="text"></textarea>
+                <div class="chat-box-option">
+                    <div class="chat-box-option-icons">
+                        <img src="images/photo.svg" alt="">
+                        <img src="images/chart.svg" alt="">
+                        <img src="images/smile.svg" alt="">
+                    </div> <!-- .chat-box-option-icons : end -->
+                    <div class="chat-box-option_btn">
+                        <p><span>0</span>/1000</p>
+                        <button type="submit">전송</button>
+                    </div> <!-- .chat-box-option_btn : end -->
+                </div> <!-- .chat-box-option : end -->
+            </div> <!-- .chat-box -->
+        </footer> <!-- footer : end -->
+    </div> <!-- #wrap : end -->
+
+    <script>
+        const textarea = document.querySelector('.chat-box > textarea');
+        const chat_btn = document.querySelector('.chat-box-option_btn > button');
+        const chat_number = document.querySelector('.chat-box-option_btn > p > span');
+        console.log(chat_number)
+
+        textarea.addEventListener('input', () => {
+            chat_number.textContent = textarea.value.length;
+
+            if(textarea.value.length >= 1000) {
+                textarea.value = textarea.value.slice(0, 1000);
+                chat_number.textContent = "1000"
+            };
+        });
+
+
+        chat_btn.addEventListener('click', () => {
+            let uploadChat = textarea.value;
+            let my_chat_box = document.querySelector('.my-chat-box');
+            let newDiv = document.createElement('div');
+            let newSpan = document.createElement('span');
+            let newSpan2 = document.createElement('span');
+
+            newDiv.classList.add("my-chat");
+            newSpan.classList.add("time");
+            newSpan2.classList.add("talk");
+
+            const dates = function() {
+                const currentTime = new Date();
+                const hours = currentTime.getHours();
+                
+                // 오전/오후 반환
+                if (hours < 12) {
+                    return "오전";
+                } else {
+                    return "오후";
+                }
+            };
+
+            const currentTime = new Date();
+            const hours = currentTime.getHours();
+            const minutes = currentTime.getMinutes();
+
+            // 오전/오후를 가져오기
+            const period = dates();
+
+            // 시간을 2자리로 맞추기
+            const formattedTime = `${period} ${hours > 12 ? hours - 12 : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+            
+            newSpan.textContent = formattedTime;
+            newSpan2.textContent = uploadChat;
+
+            newDiv.appendChild(newSpan);
+            newDiv.appendChild(newSpan2);
+
+            let my_chat = newDiv
+            
+            my_chat_box.appendChild(my_chat);
+
+            textarea.value = "";
+            chat_number.textContent = "0";
+        });
+    </script>
+</body>
+</html>
