@@ -128,10 +128,13 @@
         chat_btn.addEventListener('click', () => {
             let uploadChat = textarea.value;
             let my_chat_box = document.querySelector('.my-chat-box');
+
+            //새로운 엘리먼트 생성
             let newDiv = document.createElement('div');
             let newSpan = document.createElement('span');
             let newSpan2 = document.createElement('span');
 
+            //생성된 엘리먼트에 클래스 할당
             newDiv.classList.add("my-chat");
             newSpan.classList.add("time");
             newSpan2.classList.add("talk");
@@ -148,6 +151,7 @@
                 }
             };
 
+            //시 / 분 변환
             const currentTime = new Date();
             const hours = currentTime.getHours();
             const minutes = currentTime.getMinutes();
@@ -158,16 +162,24 @@
             // 시간을 2자리로 맞추기
             const formattedTime = `${period} ${hours > 12 ? hours - 12 : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
             
+            //시간과 텍스트 할당
             newSpan.textContent = formattedTime;
             newSpan2.textContent = uploadChat;
 
+            //엘리먼트 할당
             newDiv.appendChild(newSpan);
             newDiv.appendChild(newSpan2);
 
             let my_chat = newDiv
             
-            my_chat_box.appendChild(my_chat);
+            //출력
+            if(textarea.value == "") {
+                return ""
+            } else {
+                my_chat_box.appendChild(my_chat);
+            }
 
+            //초기화
             textarea.value = "";
             chat_number.textContent = "0";
         });
