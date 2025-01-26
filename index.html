@@ -181,6 +181,10 @@
             //초기화
             textarea.value = "";
             chat_number.textContent = "0";
+
+            //새로운 엘리먼트 추가시 스크롤 제일 밑으로
+            const main = document.querySelector('main');
+            main.scrollTop = main.scrollHeight;
         });
     </script>
 </body>
