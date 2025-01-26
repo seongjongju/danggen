@@ -27,7 +27,7 @@
         /******************** haeder **************************/
 
         /******************** main **************************/
-        main {height: 353px; padding: 0 20px 30px; overflow: hidden; overflow-y: scroll;}
+        main {height: 353px; padding: 0 20px 30px; box-sizing: border-box; overflow: hidden; overflow-y: scroll;}
         main::-webkit-scrollbar {width: 0;}
         main .my-chat-box {margin-bottom: 15px; width: 90%; margin-left: 10%;}
         main .my-chat-box .my-chat {display: flex; justify-content: right; align-items: end; margin-bottom: 15px;}
@@ -38,10 +38,6 @@
         main .you-chat-box .you-chat {display: flex; justify-content: left; align-items: end; margin-bottom: 15px;}
         main .you-chat-box .you-chat .time {font-size: 12px; margin-left: 5px; color: rgba(0, 0, 0, 0.5); white-space: nowrap;}
         main .you-chat-box .you-chat .talk {padding: 10px 15px; background: #EAEBEE; color: #000; border-radius: 30px; font-size: 14px;}
-
-        @media screen and (max-width: 450) {
-            main {height: 300px;}
-        }
         /******************** main **************************/
 
         /******************** footer **************************/
